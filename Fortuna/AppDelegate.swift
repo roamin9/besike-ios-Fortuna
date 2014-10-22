@@ -12,12 +12,46 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var positiveQuotes: [String]!
+    var negativeQuotes: [String]!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Load qutaotions from JSON files
+        
+        positiveQuotes = loadQuotes("positiveQuotes")
+        negativeQuotes = loadQuotes("negativeQuotes")
+        
+        
+        
+
+        
+        // Assertions to make that the quotations are loaded.
+        assert(positiveQuotes.count > 0, "should load positive quotes")
+        assert(negativeQuotes.count > 0, "should load negative quotes")
+        
         return true
     }
+    
+    func loadQuotes(fileName: String) -> [String] {
+        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "json")
+        assert(path != nil, "JSON file doesn't exist: \(fileName)")
+        // Load data from path
+        let data = NSData(contentsOfFile: path!)
+        assert(data != nil, "Failed to read data from: \(path)")
+        
+        // Parse JSON data
+        var err: NSError?
+        let quotes = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.allZeros, error: &err) as [String]?
+        assert(err == nil, "Error parsing json: \(err)")
+        
+        return quotes!
+    }
+    
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

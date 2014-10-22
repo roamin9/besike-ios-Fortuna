@@ -13,6 +13,8 @@
 		72B0A83F19F0FC64001ACC07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A83E19F0FC64001ACC07 /* Images.xcassets */; };
 		72B0A84219F0FC64001ACC07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A84019F0FC64001ACC07 /* LaunchScreen.xib */; };
 		72B0A84E19F0FC64001ACC07 /* FortunaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0A84D19F0FC64001ACC07 /* FortunaTests.swift */; };
+		72B0A85919F10EE6001ACC07 /* negativeQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A85719F10EE6001ACC07 /* negativeQuotes.json */; };
+		72B0A85A19F10EE6001ACC07 /* positiveQuotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B0A85819F10EE6001ACC07 /* positiveQuotes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		72B0A84719F0FC64001ACC07 /* FortunaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortunaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B0A84C19F0FC64001ACC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B0A84D19F0FC64001ACC07 /* FortunaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FortunaTests.swift; sourceTree = "<group>"; };
+		72B0A85719F10EE6001ACC07 /* negativeQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = negativeQuotes.json; sourceTree = "<group>"; };
+		72B0A85819F10EE6001ACC07 /* positiveQuotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = positiveQuotes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		72B0A83519F0FC64001ACC07 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72B0A85719F10EE6001ACC07 /* negativeQuotes.json */,
+				72B0A85819F10EE6001ACC07 /* positiveQuotes.json */,
 				72B0A83619F0FC64001ACC07 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -194,7 +200,9 @@
 			files = (
 				72B0A83D19F0FC64001ACC07 /* Main.storyboard in Resources */,
 				72B0A84219F0FC64001ACC07 /* LaunchScreen.xib in Resources */,
+				72B0A85A19F10EE6001ACC07 /* positiveQuotes.json in Resources */,
 				72B0A83F19F0FC64001ACC07 /* Images.xcassets in Resources */,
+				72B0A85919F10EE6001ACC07 /* negativeQuotes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
